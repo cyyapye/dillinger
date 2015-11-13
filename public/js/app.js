@@ -42,6 +42,11 @@
   require('./plugins/github/github-modal.controller');
   require('./plugins/github/github.controller');
 
+  // Plugin: Bitbucket
+  require('./plugins/bitbucket/bitbucket.service');
+  require('./plugins/bitbucket/bitbucket-modal.controller');
+  require('./plugins/bitbucket/bitbucket.controller');
+
   // Plugin: Dropbox
   require('./plugins/dropbox/dropbox.service');
   require('./plugins/dropbox/dropbox-modal.controller');
@@ -72,6 +77,7 @@
     'diUser',
     'diZenMode',
     'plugins.github',
+    'plugins.bitbucket',
     'plugins.dropbox',
     'plugins.googledrive',
     'plugins.onedrive',

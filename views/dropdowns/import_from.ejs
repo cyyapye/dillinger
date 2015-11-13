@@ -24,6 +24,19 @@
   </li>
   <% } %>
 
+  <% if (isBitbucketConfigured) { %>
+  <li ng-controller="Bitbucket as bitbucket">
+    <% if (isBitbucketAuth) { %>
+      <a class="import-bitbucket linked" ng-click="bitbucket.importFile('<%= bitbucket_username %>')">
+    <% } else { %>
+      <a href="/redirect/bitbucket"  class="import-bitbucket unlinked">
+    <% } %>
+      <span>Bitbucket</span>
+      <span class="icon icon-link"><%- include ../icons/linked %></span>
+    </a>
+  </li>
+  <% } %>
+
   <% if (isGoogleDriveConfigured) { %>
   <li ng-controller="Googledrive as googledrive">
     <% if (isGoogleDriveAuth) { %>

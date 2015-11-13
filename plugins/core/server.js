@@ -35,7 +35,7 @@ var Kore = function(){
 
       var name = req.body.name.trim() 
 
-      if(!name.includes('.md')){
+      if(name.indexOf('.md') > -1){
         name = name + '.md'
       }
 
